@@ -20,4 +20,8 @@
     <ProjectReference Include="..\JCH.Infrastructure\JCH.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+
 </Project>

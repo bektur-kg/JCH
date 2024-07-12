@@ -30,4 +30,3 @@ public record CreateCandidateRequest
     [MaxLength(CandidateAttributeConstants.MAX_TEXT_COMMENT_LENGTH)]
     public required string TextComment { get; set; }
 }
-

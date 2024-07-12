@@ -1,10 +1,14 @@
-﻿using JCH.Application.Abstractions;
-using JCH.Infrastructure.DbContexts;
+﻿namespace JCH.Infrastructure.Services;
 
-namespace JCH.Infrastructure.Services;
-
-public class UnitOfWork(AppDbContext dbContext) : IUnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
-    public Task<int> SaveChangesAsync() => dbContext.SaveChangesAsync();
-}
+    private readonly AppDbContext _dbContext;
 
+    public UnitOfWork(AppDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    ///<inheritdoc/>
+    public Task<int> SaveChangesAsync() => _dbContext.SaveChangesAsync();
+}

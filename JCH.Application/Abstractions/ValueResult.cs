@@ -1,5 +1,9 @@
 ﻿namespace JCH.Application.Abstractions;
 
+/// <summary>
+/// Represents the result of an operation that returns a value, indicating success or failure.
+/// </summary>
+/// <typeparam name="TValue">The type of the value.</typeparam>
 public class ValueResult<TValue>
 {
     private ValueResult(bool isSuccess, Error error, TValue? value = default)
@@ -27,4 +31,3 @@ public class ValueResult<TValue>
     public static ValueResult<TValue> Success(TValue value) => new(true, Error.None, value);
     public static ValueResult<TValue> Failure(Error error) => new(false, error);
 }
-

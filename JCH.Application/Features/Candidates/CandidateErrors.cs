@@ -1,6 +1,4 @@
-﻿using JCH.Application.Abstractions;
-
-namespace JCH.Application.Features.Candidates;
+﻿namespace JCH.Application.Features.Candidates;
 
 public abstract class CandidateErrors
 {

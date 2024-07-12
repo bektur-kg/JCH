@@ -1,5 +1,4 @@
-﻿using JCH.Application.Abstractions;
-using JCH.Domain.Modules.Candidates;
+﻿using JCH.Domain.Modules.Candidates;
 
 namespace JCH.Application.Features.Candidates;
 

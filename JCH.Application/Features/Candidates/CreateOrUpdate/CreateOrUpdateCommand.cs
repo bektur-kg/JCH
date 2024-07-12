@@ -1,5 +1,4 @@
-﻿using JCH.Application.Abstractions;
-using JCH.Application.Contracts.Candidates;
+﻿using JCH.Application.Contracts.Candidates;
 
 namespace JCH.Application.Features.Candidates.CreateOrUpdate;
 

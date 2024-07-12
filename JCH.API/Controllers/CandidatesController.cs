@@ -1,7 +1,5 @@
 ﻿using JCH.Application.Contracts.Candidates;
 using JCH.Application.Features.Candidates.CreateOrUpdate;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
 
 namespace JCH.API.Controllers;
 

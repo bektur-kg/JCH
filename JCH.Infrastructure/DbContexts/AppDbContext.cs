@@ -1,5 +1,4 @@
 ﻿using JCH.Domain.Modules.Candidates;
-using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace JCH.Infrastructure.DbContexts;

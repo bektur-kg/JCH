@@ -1,5 +1,8 @@
 ﻿namespace JCH.Application.Abstractions;
 
+/// <summary>
+/// Represents the result of an operation, indicating success or failure.
+/// </summary>
 public class Result
 {
     public bool IsSuccess { get; }
@@ -20,4 +23,3 @@ public class Result
     public static Result Success() => new(true, Error.None);
     public static Result Failure(Error error) => new(false, error);
 }
-

@@ -2,6 +2,10 @@
 
 namespace JCH.Application.Abstractions;
 
+/// <summary>
+/// Represents a read-only repository for entities of type <typeparamref name="TEntity"/>.
+/// </summary>
+/// <typeparam name="TEntity">The type of the entity.</typeparam>
 public interface IReadRepository<TEntity>
     where TEntity : Entity
 {

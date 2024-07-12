@@ -1,7 +1,4 @@
-﻿using JCH.Domain.Abstractions;
-using System.ComponentModel.DataAnnotations;
-
-namespace JCH.Domain.Modules.Candidates;
+﻿namespace JCH.Domain.Modules.Candidates;
 
 public class Candidate : Entity
 {
@@ -30,4 +27,3 @@ public class Candidate : Entity
     [MaxLength(CandidateAttributeConstants.MAX_TEXT_COMMENT_LENGTH)]
     public required string TextComment { get; set; }
 }
-

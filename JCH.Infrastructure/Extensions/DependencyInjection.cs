@@ -1,9 +1,7 @@
-﻿using JCH.Application.Abstractions;
-using JCH.Application.Features.Candidates;
+﻿using JCH.Application.Features.Candidates;
 using JCH.Infrastructure.DbContexts;
 using JCH.Infrastructure.Modules.Candidates;
 using JCH.Infrastructure.Services;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

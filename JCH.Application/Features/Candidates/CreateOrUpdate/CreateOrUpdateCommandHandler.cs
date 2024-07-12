@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using JCH.Application.Abstractions;
 using JCH.Domain.Modules.Candidates;
 using Microsoft.Extensions.Logging;
 
@@ -24,10 +23,14 @@ public class CreateOrUpdateCommandHandler : ICommandHandler<CreateOrUpdateComman
         _logger = logger;
     }
 
+    /// <summary>
+    /// Handles the creation or updating of a candidate based on the specified command.
+    /// </summary>
+    /// <param name="request">The create or update command.</param>
+    /// <param name="cancellationToken">A cancellation token.</param>
+    /// <returns>A task that represents the asynchronous operation. The task result contains the result of the operation.</returns>
     public async Task<Result> Handle(CreateOrUpdateCommand request, CancellationToken cancellationToken)
     {
-        throw new Exception("wowoi");
-
         if ((request.Dto.PreferredCallStartDate is not null) ^ (request.Dto.PreferredCallEndDate is not null))
         {
             return Result.Failure(CandidateErrors.NotProvidedBothDates);

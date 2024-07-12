@@ -4,9 +4,14 @@ using System.Reflection;
 
 namespace JCH.Infrastructure.DbContexts;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public class AppDbContext : DbContext
 {
     public DbSet<Candidate> Candidates { get; set; }
+
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+        Database.EnsureCreated();   
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -8,7 +8,8 @@ public static class DependencyInjection
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         return services
-            .AddMediatR(config => config.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+            .AddMediatR(config => config.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()))
+            .AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     }
 }
 

@@ -17,7 +17,9 @@ public class Candidate : Entity
     [EmailAddress]
     public required string Email { get; set; }
 
-    public TimeSpan? TimeInterval { get; set; }
+    public DateTime? PreferredCallStartDate { get; set; }
+
+    public DateTime? PreferredCallEndDate { get; set; }
 
     [Url]
     public string? LinkedInUrl { get; set; }
